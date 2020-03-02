@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Shopping Lists</title>
+        <link href="/styles/styles.css" rel="stylesheet">
+        <link href="/styles/images/favicon.png"rel="icon">
+    </head>
+    <body>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <header class="header">
+            <div class="container">
+                <a href="index.html" class="header__title">Shopping List App</a>
+                <h2 class="header__subtitle">Create your shopping lists easily and quickly</h2>                
+            </div>
+        </header>
+
+        <div class="actions">
+            <div class="actions__container">
+                <input id="search-text" type="text" class="input" placeholder="Filter list names">
+                <select id="filter-by" class="dropdown">
+                    <option value="byEdited">Sort by last edited</option>
+                    <option value="byCreated">Sort by recently created</option>
+                    <option value="alphabetical">Sort alphabetically</option>
+                </select>                
+            </div>
+        </div>
+
+        <div class="main__container main__container--index">
+            <div class="container">
+                <div id="lists"></div>
+                <button id="create-list" class="button">Create List</button>
+                <button id ="remove-all" class="button">Remove all</button>
+            </div>
+        </div>
+        
+
+        <script src="/scripts/uuidv4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
+        <script src="/scripts/shopping-lists-functions.js"></script>
+        <script src="/scripts/shopping-lists-app.js"></script>
+    </body>
+</html>

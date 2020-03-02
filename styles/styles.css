@@ -1,0 +1,259 @@
+/* Base Styles */
+
+/*
+
+BEM (block, element, modifier)
+
+Block     ->  house
+Element   ->  house__kitchen
+Modifier  ->  house--condo
+*/
+
+/* Font def*/
+@font-face {
+    font-family: blacklist;
+    src: url(/styles/font/TheBlacklist.ttf);
+}
+
+/* General parameters */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333333;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+/* img{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+} */
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: rgb(190, 190, 186);
+}
+
+/* Container */
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  color: white;
+}
+
+.main__container {
+    background-size: cover;
+    min-height: 300px;
+    padding: 10px;
+    overflow: hidden;
+    margin: auto;
+    opacity: 0.85;
+    filter: alpha(opacity=50);
+}
+
+.main__container--index {
+    background-image: url(/styles/images/vegetables.jpg);
+}
+
+.main__container--list {
+    background-image: url(/styles/images/vegetables1.jpg);
+}
+/* Header */
+
+.header {
+  background: #43799c;
+  color: white;
+  padding: 1.6rem 0;
+}
+
+.header__title {
+    font-family: blacklist;
+    font-size: 6rem;
+    margin-bottom: .4rem;
+    color: white;
+    text-decoration: unset;
+}
+
+.header__subtitle {
+    float: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Actions Bar */
+
+.actions {
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #dedfe0;
+    padding: .8rem
+}
+
+.actions__container {
+    align-items: center;
+    display: flex;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 3rem;
+    padding: 0 1.6rem;
+}
+
+#hide-completed-label {
+    color: #524f57;
+}
+
+/* Form Inputs */
+.button {
+    border-radius: 5px;
+    background: #43799c;
+    border: none;
+    border-bottom: 2px solid #396684;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding: .8rem;
+    transition: background .3s ease;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background: #396684;
+}
+
+.button--text {
+    background: none;
+    border: none;
+    color: rgb(163, 162, 162);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: unset;
+}
+
+.button--text:hover {
+    background: none;
+    color: white;
+}
+
+.button__confirm {
+    float: right;
+}
+
+.checkbox {
+    display: flex;
+    align-items: baseline;
+}
+
+.checkbox > input {
+    margin-right: .4rem;
+}
+.dropdown {
+    border-radius: 3px;
+    border: 1px solid #DEDFE0;
+    background: white;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgb(92, 92, 92);
+    height: 3rem;
+    margin-right: .8rem;
+}
+
+.input {
+    border: 1px solid #DEDFE0;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    height: 3rem;
+    margin-right: .8rem;
+    padding: .4rem .8rem;
+}
+
+/* List Items */
+
+#lists {
+    margin-top: 10px;
+}
+
+.list-item {
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fafafa;
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid #919092;
+    margin: 1.6rem 0;
+    padding: 1rem 1.6rem;
+    display: block;
+    transition: background .3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.list-item:hover {
+    background-color: rgba(255,255,255,0.4);
+}
+
+.list-item__container {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: bold;
+    align-items: baseline;
+    background-color: transparent;
+    color: white;
+}
+
+.list-item__container > *:first-child {
+    margin-right: .8rem;
+}
+
+.list-item__date {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.list-item__title {
+    font-weight: bold;
+}
+
+.list-item__text--checked {
+    text-decoration: line-through;
+}
+
+.empty-message {
+    margin: 3.2rem 0;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media all and (max-width:650px) {
+    .header__title {
+        font-size: 4rem;
+    }
+    .header__subtitle {
+        font-size: 1.3rem;
+    }
+    #hide-completed-label {
+        font-size: 1.3rem;
+    }
+    .input {
+        width: 11rem;
+    }
+    .list-item {
+        margin: 1.2rem 0;
+        padding: 0.5rem;
+    }
+}
