@@ -66,11 +66,13 @@ a {
 }
 
 .main__container--index {
-    background-image: url(/styles/images/vegetables.jpg);
+    background-color: #6f95af;
+    /* background-image: url(/styles/images/vegetables.jpg); */
 }
 
 .main__container--list {
-    background-image: url(/styles/images/vegetables1.jpg);
+    background-color: #6f95af;
+    /* background-image: url(/styles/images/vegetables1.jpg); */
 }
 /* Header */
 
