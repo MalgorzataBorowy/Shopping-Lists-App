@@ -2,47 +2,55 @@
 
 <html>
     <head>
-        <title>Shopping Lists</title>
+        <title>Shopping List App</title>
         <link href="/styles/styles.css" rel="stylesheet">
         <link href="/styles/images/favicon.png"rel="icon">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <header class="header">
-            <div class="container">
-                <a href="index.html" class="header__title">Shopping List App</a>
-                <h2 class="header__subtitle">Create your shopping lists easily and quickly</h2>                
+        <img class="wave" src="/styles/images/wave.png">
+        <div class="container">
+            <div class="img">
+                <img src="/styles/images/image1.svg" alt="">
             </div>
-        </header>
+            <div class="main-content">
+                <div class="main">
+                    <a href="index.html">
+                        <h2 href="index.html" class="header__title">Shopping List App</h2>
+                    </a>
+                    
+                    <div class="actions">
+                        <input id="list-title" class="input" placeholder="Enter list's title">
+                        <input id="search-text" type="text" class="input" placeholder="Filter list"><p></p>
+                        <label id="hide-completed-label">
+                            <input type="checkbox" id="hide-completed"> Hide checked
+                        </label>
+                    </div>
+                    <div>
+                        <form id="new-item">
+                            <input type="text" class="input" placeholder="Type here" name="text">
+                            <button class="button">Add item</button> 
+                        </form>
+                    </div>
+            
+                    <div class="box">
+                        <div id="list"></div>
+                        <div>
+                            <button id="remove-checked" class="button">Remove checked</button>
+                            <button id="confirm-button" class="button button__confirm">Confirm</button>                            
+                        </div>
 
-        <div class="actions">
-            <div class="actions__container">
-                <input id="list-title" class="input" placeholder="Enter list's title">
-                <p></p>
-                <input id="search-text" type="text" class="input" placeholder="Filter list">
-                <label id="hide-completed-label">
-                    <input type="checkbox" id="hide-completed"> Hide checked
-                </label>
+                    </div>           
+                </div>
             </div>
         </div>
 
-        <div class="main__container main__container--list">
-            <div class="container">
-                <div id="list"></div>
-                <form id="new-item">
-                    <input type="text" class="input" placeholder="Enter something to buy" name="text">
-                    <button class="button">Add item</button> 
-                </form>
-                <button id="remove-checked" class="button">Remove checked</button>
-                <button id="confirm-button" class="button button__confirm">Confirm</button>
-            </div>
-        </div>
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
         <script src="/scripts/uuidv4.js"></script>
         <script src="/scripts/shopping-lists-functions.js"></script>
         <script src="/scripts/list-functions.js"></script>
-        <script src="/scripts/list.js"></script>
+        <script src="/scripts/list.js"></script>   
     </body>
 </html>

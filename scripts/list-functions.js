@@ -50,7 +50,7 @@ const generateListDOM = (item) => {
     const itemElement = document.createElement('label')
     const containerElem = document.createElement('div')
     const checkbox = document.createElement('input')
-    const itemText = document.createElement('span')
+    const itemText = document.createElement('p')
     const removeButton = document.createElement('button')
 
     // Setup todo checkbox
@@ -89,7 +89,7 @@ const generateListDOM = (item) => {
 
 // Get the DOM elements for list summary
 const generateSummaryDOM = (incompleteItems) => {
-    const summary = document.createElement('h2')
+    const summary = document.createElement('h3')
     const item = incompleteItems.length === 1 ? 'item' : 'items'
     summary.textContent = `You have ${incompleteItems.length} ${item} left.`
     return summary
